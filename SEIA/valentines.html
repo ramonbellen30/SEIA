@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentines</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 400px;
+}
+
+img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #e63946;
+    font-size: 24px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #ff4d6d;
+    color: white;
+}
+
+button:hover {
+    background-color: #e63946;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #e63946;
+    display: none;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <img src="photo.jpg" alt="Us together">
+    <h1>Can you be my Valentine's date? ❤️</h1>
+
+    <button onclick="sayYes()">Yes 💕</button>
+    <button onclick="sayYes()">Yes 😘</button>
+
+    <div class="message" id="loveMessage">
+        Yay!!! I love you ❤️🥰
+    </div>
+</div>
+
+<audio id="bgMusic" src="music.mp3"></audio>
+
+<script>
+function sayYes() {
+    document.getElementById("loveMessage").style.display = "block";
+    document.getElementById("bgMusic").play();
+}
+</script>
+
+</body>
+</html>
